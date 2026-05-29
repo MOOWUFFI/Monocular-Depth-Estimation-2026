@@ -1,0 +1,22 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Editor / OS cruft
+.vscode/
+.idea/
+.DS_Store
+
+# Slurm logs
+logs/
+
+# Regenerable training artifacts. We keep curated results under
+# approaches/Mobilenet/results/{checkpoints,pointclouds}; everything below is
+# regenerable from a checkpoint and is dropped by default.
+approaches/*/results/*/predictions/
+approaches/*/results/*/submission.csv
+approaches/*/results/*/checkpoints/latest.pth
+
+# Benchmark data + outputs are large / machine-specific.
+data/benchmarks/
+results/benchmarks/
