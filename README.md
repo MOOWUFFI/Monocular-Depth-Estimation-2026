@@ -72,6 +72,12 @@ kept points in grey and the outliers removed by DROR in red.
 
 ![DROR GT cleaning — grey: kept LiDAR points, red: removed outliers](assets/denoise_combined.png)
 
+## Results (MobileNet)
+From left to right: cleaned gt, scratch, base, base+aspp, base+aspp+eagle, base+aspp+eagle+vn
+![Pointcloud comparison](assets/pointcloud_comparison.png)
+We can see how gradually the surface distortion of the predicted depth is smoothed out when we
+add each component on top of each other.
+
 ## Reproducing the results
 
 All commands are run from the repository root (this folder).
