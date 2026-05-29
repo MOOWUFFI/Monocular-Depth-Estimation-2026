@@ -105,3 +105,6 @@ All commands are run from the repository root (this folder).
 The MobileNet approach ships trained per-epoch checkpoints under
 `approaches/Mobilenet/results/checkpoints/`, so you can run inference and
 visualisation without retraining.
+
+## Use of generative AI
+We used Claude Code to refactor the codebase, since our original project contained some unintuitive file namings and monolithic code. Claude Code also added docstrings to make the Code more accessible for first-time users.
