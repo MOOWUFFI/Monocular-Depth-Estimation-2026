@@ -55,7 +55,9 @@ exact commands.
 ## Pointcloud predictions
 
 We ship **interactive 3D pointcloud predictions as standalone `.html` files** —
-open them in any browser to orbit/zoom the predicted scene. The MobileNet
+open them in any browser to orbit/zoom the predicted scene. We choose the first 8 images
+of the train set, as we held them out during training to have a ground-truth to compare
+with. The ground-truth point clouds are under `assets/`. The MobileNet
 predictions are committed under
 `approaches/Mobilenet/results/pointclouds/*.html`. Generate your own from any
 depth `.npy` + RGB with:
