@@ -1,17 +1,6 @@
-# Spectral, Boundary-Aware Monocular Depth Estimation
+# Spectral-Guided Lightweight Depth Estimation
 
-Monocular Depth Estimation (MDE) struggles with boundary bleeding and geometric
-inconsistency, because standard architectures rely on raw RGB gradients that
-conflate physical object boundaries with superficial textures and shadows. This
-project adapts **EAGLE** — a self-guided spectral framework originally proposed
-for transformer encoders — to convolutional backbones, augmenting the encoder
-with dilated convolutions (ASPP) to recover the large receptive field on which
-spectral affinity computation depends. Two mechanisms drive the approach: an
-**Eigen-Guided Decoder** that folds spectrally-derived object boundaries into
-the upsampling hierarchy to suppress boundary bleeding, and a **Planar
-Consistency Loss** that penalises intra-cluster depth variance to encourage
-piecewise-planar geometry. A virtual-normal geometric prior further resolves
-depth ambiguities under sparse LiDAR supervision.
+While foundation models achieve high-fidelity monocular depth estimation, their computational weight precludes deployment on edge devices. Conversely, lightweight models often suffer from "depth bleeding" at occlusion boundaries due to their limited receptive fields. We propose a compact 1.3M parameter framework that bridges unsupervised spectral object discovery with supervised geometric regression. We provide the first adaptation of EAGLE—a spectral framework originally designed for Transformers—to convolutional backbones. By augmenting the encoder with Atrous Spatial Pyramid Pooling (ASPP), we recover the expansive receptive fields required for accurate spectral affinity computation within a convolutional regime, and an Eigen-Guided Decoder integrates the resulting object boundaries into the upsampling hierarchy to mitigate boundary artifacts.
 
 ## Architecture
 
